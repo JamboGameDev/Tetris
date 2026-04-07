@@ -7,7 +7,9 @@ Grid::Grid()
 	NumCols = 10;
 	CellSize = 60;
 	Initialize();
-	colors = GetCellColors();
+	colors = GetCellColors(); 
+	// присваиваем вектору colors результат функции
+	// здесь копируется список цветов в colors
 }
 
 void Grid::Initialize()
@@ -33,7 +35,7 @@ void Grid::Print()
 	}
 }
 
-std::vector<Color> Grid::GetCellColors()
+std::vector<Color> Grid::GetCellColors() // функция создаёт и ВОЗВРАЩАЕТ std::vector<Color>
 {
 	Color darkGrey = { 26, 31, 40, 255 };
 	Color green = { 47, 230, 23, 255 };
@@ -45,6 +47,8 @@ std::vector<Color> Grid::GetCellColors()
 	Color blue = { 13, 64, 216, 255 };
 
 	return { darkGrey, green, red, orange, yellow, purple, cyan, blue };
+	// создаётся временный vector<Color> и заполняется этими значениями
+	// порядок важен: индекс = номер цвета
 }
 
 void Grid::Draw()
@@ -54,7 +58,13 @@ void Grid::Draw()
 		for (int column = 0; column < NumCols; column++)
 		{
 			int CellValue = grid[row][column];
-			DrawRectangle(column * CellSize, row * CellSize, CellSize, CellSize, colors[CellValue]);
+			DrawRectangle(column * CellSize, row * CellSize, CellSize - 1, CellSize - 1, colors[CellValue]);
+			// доступ к элементу вектора по индексу
+				// CellValue используется как индекс:
+				// 0 → darkGrey
+				// 1 → green
+				// 2 → red
+				// и т.д.
 		}
 	}
 }

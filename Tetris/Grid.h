@@ -14,10 +14,10 @@ public:
 	int grid[20][20];
 
 private:
-	std::vector<Color> GetCellColors();
+	std::vector<Color> GetCellColors(); // функция возвращает ВЕКТОР (список) цветов
 	int NumRows;
 	int NumCols;
 	int CellSize;
-	std::vector<Color> colors;
+	std::vector<Color> colors; // вектор, который хранит все цвета клеток (динамический массив Color)
 
 };
