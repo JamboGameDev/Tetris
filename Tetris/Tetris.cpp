@@ -5,7 +5,7 @@
 int main()
 {
 	Color DarkBlue = { 44, 44, 127, 255 };
-	InitWindow(600, 900, "RaylibTetris");
+	InitWindow(300, 600, "RaylibTetris");
 	SetTargetFPS(60);
 
 	Grid grid = Grid();

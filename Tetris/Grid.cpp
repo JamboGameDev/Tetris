@@ -5,7 +5,7 @@ Grid::Grid()
 {
 	NumRows = 20;
 	NumCols = 10;
-	CellSize = 60;
+	CellSize = 30;
 	Initialize();
 	colors = GetCellColors(); 
 	// присваиваем вектору colors результат функции

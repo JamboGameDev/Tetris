@@ -11,7 +11,7 @@ public:
 	void Print();
 	void Draw();
 
-	int grid[20][20];
+	int grid[20][10];
 
 private:
 	std::vector<Color> GetCellColors(); // функция возвращает ВЕКТОР (список) цветов
