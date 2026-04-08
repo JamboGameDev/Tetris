@@ -14,7 +14,6 @@ public:
 	int grid[20][10];
 
 private:
-	std::vector<Color> GetCellColors(); // функция возвращает ВЕКТОР (список) цветов
 	int NumRows;
 	int NumCols;
 	int CellSize;
