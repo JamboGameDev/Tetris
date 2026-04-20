@@ -54,4 +54,13 @@ void Grid::Draw()
 	}
 }
 
+bool Grid::IsCellOutSide(int row, int column)
+{
+	if (row >= 0 && row < NumRows && column >= 0 && column < NumCols)
+	{
+		return false;
+	}
+	return true;
+}
+
 

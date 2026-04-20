@@ -1,6 +1,7 @@
 #pragma once
 #include "grid.h"
 #include <vector>
+#include "raylib.h"
 #include "blocks.cpp"
 
 class Game
@@ -12,8 +13,12 @@ public:
 	std::vector<Block> GetAllBlocks();
 	void Draw();
 	void HandleInput();
+	void MoveBlockLeft();
+	void MoveBlockRight();
+	void MoveBlockDown();
 
 private:
+	bool IsBlockOutside();
 	std::vector<Block> blocks;
 	Block currentBlock;
 	Block nextBlock;
